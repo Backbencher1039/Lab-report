@@ -127,6 +127,20 @@
         display: inline-block;
         width: 15px;
       }
+      .info-row {
+  display: grid;
+  grid-template-columns: 170px 15px 1fr;
+  margin: 12px 0;
+}
+
+.info-label {
+  font-weight: bold;
+}
+
+.info-value {
+  text-align: left;
+  word-break: break-word;
+}
 
       .submitted-section {
         margin-top: 50px;
@@ -267,10 +281,11 @@
               <span class="label">Experiment No</span
               ><span class="colon">:</span> <span id="pExpNo"></span>
             </p>
-            <p>
-              <span class="label">Experiment Names</span
-              ><span class="colon">:</span> <span id="pExpName"></span>
-            </p>
+           <div class="info-row">
+  <div class="info-label">Experiment Name</div>
+  <div class="info-colon">:</div>
+  <div class="info-value" id="pExpName"></div>
+</div>
             <p>
               <span class="label">Submission Date</span
               ><span class="colon">:</span> <span id="pSubDate"></span>
@@ -335,3 +350,4 @@
     </script>
   </body>
 </html>
+
